@@ -1,6 +1,6 @@
 version: 0
 metadata: 
-    name: "Test project for demo'ing tc-github"
+    name: "Test project for demoing tc-github"
     description: "Tests for a little rust demo project"
     owner: "{{ event.head.user.email }}" 
     source: "{{ event.head.repo.url }}"
@@ -24,7 +24,7 @@ tasks:
               - "-c"
               - "git clone $GITHUB_HEAD_REPO_URL repo && cd repo && git checkout $GITHUB_HEAD_BRANCH && rustc --test unit_test.rs && ./unit_test"
       metadata:
-          name: "Tests for test project for demo'ing tc-github"
+          name: "Tests for test project for demoing tc-github"
           description: "Tests for a little rust demo project"
           owner: "{{ event.head.user.email }}"
           source: "{{ event.head.repo.url }}"
